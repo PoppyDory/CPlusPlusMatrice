@@ -21,7 +21,7 @@ int main()
     {
         for (int j = 0; j < colonne; j++)
         {
-            matrice[i][j] =1; //rand()%10;
+            matrice[i][j] = 1; // rand()%10;
         }
     }
 
@@ -50,10 +50,10 @@ int main()
         }
         cout << endl;
     }
-cout << endl;
-    //esercizio
-    // input matrice, righe, colonne
-    //output 0 sulle diagonali
+    cout << endl;
+    // esercizio
+    //  input matrice, righe, colonne
+    // output 0 sulle diagonali
 
     cout << "    ";
     for (int i = 0; i < colonne; i++)
@@ -75,16 +75,20 @@ cout << endl;
 
         for (int j = 0; j < colonne; j++)
         {
-            if( i==j || j+i==colonne-1)
+            if (i == j)
             {
-                matrice[i][j]=0;
+                matrice[i][j] = 0;
+            }
+            else if (j + i == colonne - 1)
+            {
+                matrice[i][j] = 0;
             }
             cout << matrice[i][j] << " ";
         }
         cout << endl;
     }
 
-     //stampa risultato
+    // stampa risultato
     cout << endl;
     cout << "    ";
     for (int i = 0; i < colonne; i++)
