@@ -6,7 +6,7 @@ int main()
     int righe = 15;
     int colonne = 15;
     char vuoto = ' ';
-    string parole[] = {"hola", "apple", "casa","mamma", "cane","nonno","albero"};
+    string parole[] = {"hola", "apple", "casa","mamma", "cane","nonno","albero", "andrea"};
     int paroleLunghezza = sizeof(parole) / sizeof(parole[0]);
     char matrice[righe][colonne];
     int contatore=0;
@@ -36,7 +36,7 @@ int main()
                 int x = rand() % righe;
                 int y = rand() % (colonne - parole[indice].length()); // mi dice il giusto numero random dove posso inserire la parola
 
-                while (matrice[x][y] != vuoto) // mi devo domandare se la posizione è vuota per inserire la parola
+                while (matrice[x][y] != vuoto ) // mi devo domandare se la posizione è vuota per inserire la parola
                 {
                     x = rand() % righe;
                     y = rand() % (colonne - parole[indice].length()); // estrai due numeri finche non sono vuoti
@@ -155,9 +155,9 @@ int main()
                     y = rand() % (colonne - parole[indice].length()); // estrai due numeri finche non sono vuoti
                 }
 
-                for (int i = 0; i < parole[indice].length(); i++)
+                for (int i =parole[indice].length() ; i >=0 ; i--)
                 {
-                    if (matrice[x][y  - i] != vuoto) // controllo se ho spazzi vuoti per tutta la parola
+                    if (matrice[x][y - i] != vuoto) // controllo se ho spazzi vuoti per tutta la parola
                     {
                         x = rand() % righe;
                         y = rand() % (colonne - parole[indice].length()); // cerco un altro posto se non ho abbastanza spazzi vuoti
@@ -165,7 +165,7 @@ int main()
                     }
                 }
 
-                for (int i = 0; i < parole[indice].length(); i++) // leggo la parola e la scrivo nella matrice
+                for (int i =parole[indice].length() ; i >=0 ; i--) // leggo la parola e la scrivo nella matrice
                 {
                     matrice[x][y - i] = parole[indice][i]; // inserisco qui
                 }
