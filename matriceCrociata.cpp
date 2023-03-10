@@ -21,7 +21,7 @@ int main()
     // non toccare sopra
     for (int indice = 0; indice < paroleLunghezza; indice++) // controllo tutte le parole
     {
-        if (indice % 5 == 0)
+        if (indice % 7 == 0)
         {
             // orizzontale sinistra verso destra 
             if (parole[indice].length() > colonne) 
@@ -58,7 +58,7 @@ int main()
                 }
             }
         }
-        else if (indice % 5 == 1)
+        else if (indice % 7 == 1)
         {
             // verticale sopra verso sotto
             if (parole[indice].length() > righe)
@@ -96,10 +96,10 @@ int main()
                 }
             }
         }
-        else if ( indice % 5 == 2)
+        else if ( indice % 7 == 2)
         {
             // diagonale
-            if (parole[indice].length() > righe && parole[indice].length() > colonne) 
+            if (parole[indice].length() > righe || parole[indice].length() > colonne) 
             {
                 cout << "troppo lunga"; // se la lunghezza della aprola è più della lunghezza delle colonne non posso scrivere la colonna
                 continue;
@@ -134,7 +134,7 @@ int main()
                 
             }
         }
-        else if ( indice % 5 == 3)
+        else if ( indice % 7 == 3)
         {
             //da destra verso sinistra
                         if (parole[indice].length() > colonne) 
@@ -155,7 +155,7 @@ int main()
                     y = rand() % (colonne - parole[indice].length()); // estrai due numeri finche non sono vuoti
                 }
 
-                for (int i =parole[indice].length() ; i >=0 ; i--)
+                for (int i =0 ; i < parole[indice].length() ; i--)
                 {
                     if (matrice[x][y - i] != vuoto) // controllo se ho spazzi vuoti per tutta la parola
                     {
@@ -171,7 +171,7 @@ int main()
                 }
             }
         }
-        else
+        else if( indice % 7 == 4 ) 
         {
             // da sotto a sopra 
                         if (parole[indice].length() > righe)
@@ -181,7 +181,7 @@ int main()
                 continue;
             }
 
-            else
+            else 
             {
                 contatore++;
                 int x = rand() % (righe - parole[indice].length());
@@ -208,6 +208,10 @@ int main()
                     matrice[x - i][y] = parole[indice][i]; // inserisco qui
                 }
             }
+        }
+        else
+        {
+
         }
     }
 
