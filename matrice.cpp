@@ -12,8 +12,8 @@ int main()
     // int array2[2]={3,4};
     // int arraySpeciale[2]={array1,array2};
 
-    int righe = 9;
-    int colonne = 9;
+    int righe = 10;
+    int colonne = 10;
 
     int matrice[righe][colonne];
 
@@ -51,6 +51,16 @@ int main()
         cout << endl;
     }
     cout << endl;
+        int somma = 0;
+    for (int i = 0; i < righe; i++)
+    {
+        for (int j = 0; j < colonne; j++)
+        {
+
+            somma += matrice[i][j];
+        }
+    }
+    cout << "somma = " << somma << endl;
     // esercizio
     //  input matrice, righe, colonne
     // output 0 sulle diagonali
@@ -73,7 +83,7 @@ int main()
 
         cout << i << "|  ";
 
-        for (int j = 0; j < colonne; j++)
+        for (int j = 0; j < colonne; j++) 
         {
             if (i == j)
             {
@@ -125,7 +135,7 @@ int main()
     cout << endl;
     // stampa la somma di tutta la matrice
 
-    int somma = 0;
+   somma = 0;
     for (int i = 0; i < righe; i++)
     {
         for (int j = 0; j < colonne; j++)
