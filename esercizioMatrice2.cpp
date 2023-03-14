@@ -26,18 +26,35 @@ int main()
             cout << matriceRandom[i][j] << " ";
         }
     }
-
+    int contatore = 0;
     cout << endl;
     cout << "I numeri divisibili per tre sono: ";
     for (int i = 0; i < righe; i++)
     {
         for (int j = 0; j < colonne; j++)
         {
-            if (matriceRandom[i][j] % 3 == 0 && matriceRandom[i][j]!=0 )
+            if (matriceRandom[i][j] % 3 == 0 && matriceRandom[i][j] != 0)
             {
-                cout << matriceRandom[i][j]<< " ";
+                contatore++;
             }
         }
     }
-    
+    int arrayDivisibili[contatore];
+    int k=0;
+    for (int i = 0; i < righe; i++)
+    {
+        for (int j = 0; j < colonne; j++)
+        {
+            if (matriceRandom[i][j] % 3 == 0 && matriceRandom[i][j] != 0)
+            {
+                arrayDivisibili[k]= matriceRandom[i][j];
+                k++;
+            }
+            
+        }
+    }
+    for(int i=0; i<contatore; i++)
+    {
+        cout<< arrayDivisibili[i]<< " ";
+    }
 }

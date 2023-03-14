@@ -7,8 +7,8 @@ using namespace std;
 
 int main()
 {
-    int righe = 5;
-    int colonne = 5;
+    int righe = 10;
+    int colonne = 10;
     int matriceRandom[righe][colonne];
 
     for (int i = 0; i < righe; i++)
@@ -28,7 +28,7 @@ int main()
         for (int j = 0; j < colonne; j++)
         {
             sommaRighe += matriceRandom[i][j];
-            cout << matriceRandom[i][j] << " ";
+            cout << matriceRandom[i][j] << "  ";
         }
         cout << " |" << sommaRighe << " ";
     }
@@ -36,7 +36,7 @@ int main()
 
     for (int i = 0; i < colonne; i++)
     {
-        cout << "--";
+        cout << "---";
     }
     cout << endl;
     for (int i = 0; i < colonne; i++)
