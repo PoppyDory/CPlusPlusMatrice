@@ -11,43 +11,38 @@ int isWinner(char *arr)
 
     for (int i = 0; i < 9; i += 3)
     {
-        if ((arr[i] == arr[i + 1]) && (arr[i + 1] == arr[i + 2]) && arr[i]!=vuoto ) // ho tre x vicine
+        if ((arr[i] == arr[i + 1]) && (arr[i + 1] == arr[i + 2]) && (arr[i]!=vuoto) ) // ho tre x vicine
         {
             return 1; // hai vinto quindi 1
         }
     }
-    for(int i=0; i<9; i++)
+   for(int i=0; i<3; i++)
     {
-        if ((arr[i] == arr[i + 3]) && (arr[i + 3] == arr[i + 6])&& arr[i]!=vuoto) // ho tre x in colonna 
+        if ((arr[i] == arr[i + 3]) && (arr[i + 3] == arr[i + 6])&& (arr[i]!=vuoto)) // ho tre x in colonna 
         {
-            return 1; // hai vinto quindi 1
+            return 1; // hai vinto quindi 1    
         }
     }
+     
     // se li ho trovati in diagonale hai vinto =1
-    if ((arr[0]==arr[4]&& arr[4]==arr[8]))
+    if ((arr[0]==arr[4]&& arr[4]==arr[8])&& (arr[0]!=vuoto))
     {
         return 1;
     }
-    if( (arr[2]==arr[4]&& arr[4]==arr[6]))
+    if((arr[2]==arr[4]&& arr[4]==arr[6])&& (arr[2]!=vuoto))
     {
-        return 1;
+        return 1; 
     }
-    // se non ho trovato nulla pareggio = -1 
+    
     for (int i =0; i<9; i++)
     {
-        if (arr[i]!=vuoto)
+        if (arr[i]==vuoto)
         {
-            return -1;
+            return 0;
         }
-    }   
-    // se ho ancora spazzi vuoti return 0
-    return 0;
-    // tabella = [_,_,_,X,_,_,O,_,_]
-    //
-    // _ _ _
-    // _X_
-    // O _ _
-
+    } 
+ 
+    return -1; 
 }
 
 void stampa(char *tabella)
