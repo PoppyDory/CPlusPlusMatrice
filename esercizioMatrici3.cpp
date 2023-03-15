@@ -7,21 +7,21 @@ using namespace std;
 
 int main()
 {
-    int righe = 10;
-    int colonne = 10;
-    int matriceRandom[righe][colonne];
+    int righe = 5;
+    int colonne = 5;
+    int matriceRandom[righe][colonne]; // creo la matrice 
 
     for (int i = 0; i < righe; i++)
     {
         for (int j = 0; j < colonne; j++)
         {
-            matriceRandom[i][j] = rand() % 10;
+            matriceRandom[i][j] = rand() % 10; // inserisco numeri casuali 
         }
     }
-
+    // stampa
     for (int i = 0; i < righe; i++)
     {
-        int sommaRighe = 0;
+        int sommaRighe = 0; // inizializzo a zero qui, così riparte da zero per ogni riga 
 
         cout << endl;
 
@@ -36,15 +36,16 @@ int main()
 
     for (int i = 0; i < colonne; i++)
     {
-        cout << "---";
+        cout << "----";
     }
     cout << endl;
-    for (int i = 0; i < colonne; i++)
+    //sommo le colonne 
+    for (int i = 0; i <righe ; i++)
     {
         int sommaColonne = 0;
-        for (int j=0; j<righe;  j++)
+        for (int j=0; j<colonne;  j++)
         {
-        sommaColonne += matriceRandom[j][i];
+        sommaColonne += matriceRandom[j][i]; // inverti i e j perchè voglio scorrere per colonne 
         }
         cout << sommaColonne << " ";
     }

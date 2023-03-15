@@ -9,12 +9,15 @@ using namespace std;
 
 int main()
 {
-    int numeroProve = 4;
-    int numeroStudenti = 3;
+    int numeroProve = 4; //colonne 
+    int numeroStudenti = 3; //righe 
 
     int matriceVoti[numeroStudenti][numeroProve];
+    string nomiStudenti[numeroStudenti]; // creo cun array per inserire anch i nomi 
     for (int i = 0; i < numeroStudenti; i++)
-    {
+    {   
+        cout<< "iserisci il nome dello studente "<< i+1<< ": ";
+        cin>> nomiStudenti[i];
         for (int j = 0; j < numeroProve; j++)
         {
             cout << "inserisci il voto dello studente studente " << i+1 <<" alla prova " << j+1 << endl;
@@ -37,7 +40,7 @@ int main()
     cout << endl;
     for (int i = 0; i < numeroStudenti; i++)
     {
-
+        cout <<nomiStudenti[i]<< " ";
         cout << i << "|  ";
 
         for (int j = 0; j < numeroProve; j++)

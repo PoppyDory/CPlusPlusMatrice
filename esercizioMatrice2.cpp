@@ -40,7 +40,7 @@ int main()
         }
     }
     int arrayDivisibili[contatore];
-    int k=0;
+    int k=0; // creo un indice che scorre l'array 
     for (int i = 0; i < righe; i++)
     {
         for (int j = 0; j < colonne; j++)

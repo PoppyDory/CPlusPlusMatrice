@@ -49,14 +49,15 @@ int main()
     riempiMatrice(matriceRandom);
     stampaMatrice(matriceRandom);
     cout << endl;
-    cout << "--------------" << endl;
+    cout << "------------------" << endl;
     cout << "    ";
     for (int i = 1; i < RIGHE + 1; i++)
     {
         cout << i << "  ";
     }
     cout << endl;
-    cout << "----------------" << endl;
+    cout << "------------------" << endl;
+    // righe invertite 
     for (int i = RIGHE - 1; i >= 0; i--)
     {
         cout << endl;
@@ -68,15 +69,15 @@ int main()
         }
     }
     cout << endl;
-    cout << "----------------" << endl;
+    cout << "------------------" << endl;
     cout << "    ";
     for (int i = 1; i < RIGHE + 1; i++)
     {
         cout << i << "  ";
     }
     cout << endl;
-    cout << "----------------" << endl;
-
+    cout << "------------------" << endl;
+    // colonne invertite 
     for (int i = 0; i < RIGHE; i++)
     {
         cout << endl;
@@ -87,17 +88,19 @@ int main()
         }
     }
     cout << endl;
-    cout << "----------------" << endl;
+    cout << "------------------" << endl;
     cout << "    ";
     for (int i = 1; i < RIGHE + 1; i++)
     {
         cout << i << "  ";
     }
     cout << endl;
-    cout << "----------------" << endl;
+    cout << "------------------" << endl;
+
+    // trasposta 
     for ( int i =0 ; i<RIGHE; i++ )
     {
-            cout << endl;
+        cout << endl;
         cout << i + 1 << "|  ";
         for ( int j =0; j< COLONNE; j++)
         {
@@ -105,6 +108,5 @@ int main()
         }
 
     }
-
 
 }
