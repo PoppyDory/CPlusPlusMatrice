@@ -9,26 +9,26 @@ int isWinner(char *arr)
 {
     char vuoto = '_';
 
-    for (int i = 0; i < 9; i + 3)
+    for (int i = 0; i < 9; i += 3)
     {
-        if ((arr[i] == arr[i + 1]) && (arr[i + 1] == arr[i + 2])) // ho tre x vicine
+        if ((arr[i] == arr[i + 1]) && (arr[i + 1] == arr[i + 2]) && arr[i]!=vuoto ) // ho tre x vicine
         {
             return 1; // hai vinto quindi 1
         }
     }
     for(int i=0; i<9; i++)
     {
-        if ((arr[i] == arr[i + 3]) && (arr[i + 3] == arr[i + 6])) // ho tre x in colonna 
+        if ((arr[i] == arr[i + 3]) && (arr[i + 3] == arr[i + 6])&& arr[i]!=vuoto) // ho tre x in colonna 
         {
             return 1; // hai vinto quindi 1
         }
     }
     // se li ho trovati in diagonale hai vinto =1
-    if (arr[0]==arr[4]&& arr[4]==arr[8])
+    if ((arr[0]==arr[4]&& arr[4]==arr[8]))
     {
         return 1;
     }
-    if( arr[2]==arr[4]&& arr[4]==arr[6])
+    if( (arr[2]==arr[4]&& arr[4]==arr[6]))
     {
         return 1;
     }
