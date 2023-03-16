@@ -2,9 +2,9 @@
 
 using namespace std;
 const char VUOTO = '_';
- int mossaPensata(char *tab)
- {
-    
+int mossaPensata(char *tab)
+{
+
     int risultato = -1;
     int combinazioni[8][3] = {
         {0, 1, 2},
@@ -20,7 +20,7 @@ const char VUOTO = '_';
     // se il giocatore può vincere io lo blocco
     // XXO
 
-    for (int i = 0; i < 8; i++) // due X su 0 e 1 
+    for (int i = 0; i < 8; i++) // due X su 0 e 1
     {
 
         char a = tab[combinazioni[i][0]];
@@ -35,7 +35,7 @@ const char VUOTO = '_';
         }
     }
 
-    for (int i = 0; i < 8; i++) // due X su 0 e 2 
+    for (int i = 0; i < 8; i++) // due X su 0 e 2
     {
         char a = tab[combinazioni[i][0]];
         char b = tab[combinazioni[i][2]];
@@ -67,7 +67,7 @@ const char VUOTO = '_';
     // ora controllo se il computer può vincere
     // se ci sono due O metto il terzo
 
-    for (int i = 0; i < 8; i++) // due X su 0 e 1 
+    for (int i = 0; i < 8; i++) // due X su 0 e 1
     {
 
         char a = tab[combinazioni[i][0]];
@@ -82,7 +82,7 @@ const char VUOTO = '_';
         }
     }
 
-    for (int i = 0; i < 8; i++) // due X su 0 e 2 
+    for (int i = 0; i < 8; i++) // due X su 0 e 2
     {
         char a = tab[combinazioni[i][0]];
         char b = tab[combinazioni[i][2]];
@@ -110,18 +110,20 @@ const char VUOTO = '_';
             risultato = combinazioni[i][0];
         }
     }
+    
 
-
-
-  if(risultato == -1)
+    if (risultato == -1)
     {
         risultato = rand() % 9;
+        while(tab[risultato]!=VUOTO)
+        {
+        risultato = rand() % 9;
+        }
     }
-    
 
     cout << "risultato: " << risultato << endl;
     return risultato;
- }
+}
 // 1 per la vittoria
 // 0 per continuare la partita
 // -1 per il pareggio
