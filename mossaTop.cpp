@@ -33,7 +33,7 @@ int main()
 
     /*
         X _ X       O _ _       O _ X       _ X _       X _ _       _ X X
-        _ O _       _ X _       _ X _       _ _ O       _ _ _       _ O _       
+        _ O _       _ X _       _ X _       _ _ O       _ _ _       _ O _        TENTATIVI  
         _ _ _       X _ _       _ _ _       _ X _       X _ O       _ _ _  
     */
 
